@@ -1,17 +1,19 @@
 <header>
-    <section id="head-bottom">
-        <section class="head-bottom-left">
-            <!-- <img src="../../assets//image/logo.png" alt="LOGO" /> -->
+    <section class="row header">
+        <section id="head-left" class="col-md-4">
+            <section class="head-left-left">
+                <!-- <img src="../../assets//image/logo.png" alt="LOGO" /> -->
+            </section>
         </section>
+        <nav class="col-md-8">
+            <ul class="nav nav-pills" role="tablist">
+                <li role="presentation" *ngFor="let item of navbar; let i =index" [ngClass]="{'active': selected == i}" (click)="checkStatus(i)">
+                    <a>{{item}}</a>
+                </li>
+            </ul>
+        </nav>
     </section>
 </header>
-<nav>
-    <ul class="nav nav-pills" role="tablist">
-        <li role="presentation" *ngFor="let item of navbar; let i =index" [ngClass]="{'active': selected == i}" (click)="checkStatus(i)">
-            <a>{{item}}</a>
-        </li>
-    </ul>
-</nav>
 <!-- <carousel [interval]="myInterval" [noWrap]="noWrapSlides" [(activeSlide)]="activeSlideIndex">
     <slide *ngFor="let slidez of slides;">
         <img [src]="slidez" style="width: 100%; height:300px">

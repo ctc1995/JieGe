@@ -1,5 +1,10 @@
-#iframeVideo{
-    max-width: 1030px;
-    margin: 0 auto;
-    text-align: center;
+.bg{
+    background: url("../../assets/image/tangshabu.jpg") no-repeat;
+    background-size: cover;
+    #iframeVideo{
+        max-width: 1030px;
+        margin: 0 auto;
+        text-align: center;
+    
+    }
 }
