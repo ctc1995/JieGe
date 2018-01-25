@@ -1,0 +1,31 @@
+<footer>
+    <section class="row content">
+        <section class="col-md-3 footer-A">
+            <section>
+                <img src="../../assets/image/二维码.png" alt="微信二维码">
+            </section>
+            <section>
+            <span>关注我们</span>
+                <i class="iconfont icon-wechat" style="margin-left: 15px;"></i>
+                <i class="iconfont icon-sina"></i>
+            </section>
+        </section>
+        <section class="col-md-5 footer-B">
+            <ul>
+                <li *ngFor="let item of footerList">
+                    <i class="iconfont icon-{{item.icon}}"></i>
+                    {{item.title}}：{{item.value}}
+                </li>
+            </ul>
+        </section>
+        <section class="col-md-4 footer-C">
+            <div id="allmap"></div>
+        </section>
+    </section>
+</footer>
+<section class="company">
+    <span>版权所有：Benson.Cai</span>
+    <!-- 深圳觧歌文化传媒有限公司 -->
+    <i class="iconfont icon-iconfont10"></i>
+    <span>13713967665</span>
+</section>

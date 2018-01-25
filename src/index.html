@@ -1,14 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Jiege</title>
-  <base href="/">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+  <head>
+    <title>Ahead of time compilation</title>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=EKbPLIAo0NnmCBvfw53bERwGsMz4lMMW"></script>
+  </head>
+  <body>
+    <my-app>Loading...</my-app>
+  </body>
 </html>
+<script>
+	// 百度地图API功能
+	var map = new BMap.Map("allmap");
+	var point = new BMap.Point(114.272533,22.736852);
+	var marker = new BMap.Marker(point);  // 创建标注
+	map.addOverlay(marker);              // 将标注添加到地图中
+	map.centerAndZoom(point, 15);
+	var opts = {
+		title : "海底捞王府井店" , // 信息窗口标题 深圳觧歌文化传媒有限公司
+	}
+	var infoWindow = new BMap.InfoWindow("地址：深圳市龙岗区龙岗街道龙园路279号4楼", opts);  // 创建信息窗口对象 
+	map.openInfoWindow(infoWindow,point);
+</script>
