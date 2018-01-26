@@ -14,8 +14,10 @@ export class setHightDirective implements OnInit{
             let width = this.el.nativeElement.offsetWidth;
             if(width>1030){
                 this.el.nativeElement.style.height='580px'
+                document.getElementById("mask-layer-box").style.height='580px'
             }else{
                 this.el.nativeElement.style.height=width*9/16+'px'
+                document.getElementById("mask-layer-box").style.height=width*9/16+'px'
             }
         }
     }
@@ -23,8 +25,10 @@ export class setHightDirective implements OnInit{
         let width = this.el.nativeElement.offsetWidth;
         if(width>1030){
             this.el.nativeElement.style.height='580px'
+            document.getElementById("mask-layer-box").style.height='580px'
         }else{
             this.el.nativeElement.style.height=width*9/16+'px'
+            document.getElementById("mask-layer-box").style.height=width*9/16+'px'
         }
     }
 }
