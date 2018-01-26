@@ -1,0 +1,26 @@
+.content-body{
+    background-color: rgba(255, 119, 1, 0.1);
+    margin: 50px 1% 0;
+    padding: 3% 4%;
+    border-radius: 20px;
+    h3{
+        text-align: center;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+    }
+    section{
+        font-size: 20px;
+        font-family: "\5FAE\x8F6F\6B63\9ED1\4F53 ";
+        margin-bottom: 20px;
+        p{
+            text-indent: 2.3em;
+            letter-spacing: 3px;
+            margin-bottom: 0;
+        }
+        .content-body-title{
+            font-weight: 600;
+            text-indent: inherit;
+            margin: 10px 0;
+        }
+    }
+}

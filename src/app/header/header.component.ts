@@ -9,7 +9,6 @@ import { DataService } from '../common/data-service.service'
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  resou:Array<any> = [];
   selected: number = 0;
   navbar:Array<any> = [];
   //二级链接地址
@@ -25,7 +24,6 @@ export class HeaderComponent implements OnInit {
     private dataService: DataService,
     private router: Router
   ) {
-    this.resou = dataService.resou;
     this.navbar = dataService.navbar;
   }
   //选中导航菜单
