@@ -10,7 +10,27 @@
     <section class="col-md-9 content-right">
         <section class="content-title">
             市场活动
-            <span>Business</span>
+            <span>Marketing Activity</span>
+        </section>
+        <section class="content-body">
+            <h3>活动介绍</h3>
+            <p class="indent">
+                针对客户不同的市场活动要求，
+                觧歌传媒可以为客户提供企业产品发布会、年会活动、公益活动、赛事活动等大、中、小型活动。
+            </p>
+            <p class="indent">
+                觧歌传媒将以客户需求为导向，选择适合的活动模式和方式，以期达到客户所需要的活动宣传效果。
+            </p>
+            <section *ngFor="let item of content">
+                <strong>{{item.title}}</strong>
+                <p class="video-in">
+                    <img src="{{item.img}}" alt="chihuo">
+                    <a href="{{item.video}}" target="blank">
+                        <i class="iconfont icon-play"></i>
+                        <span class="in-live">播放视频</span>
+                    </a>
+                </p>
+            </section>
         </section>
     </section>
 </section>

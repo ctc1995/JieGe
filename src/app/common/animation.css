@@ -1,0 +1,35 @@
+
+@keyframes btn-block
+{
+    from {display: none;}
+    to {display: block;}
+}
+/* Firefox */
+@-moz-keyframes btn-block
+{
+    from {display: none;}
+    to {display: block;}
+}
+/* Safari and Chrome */
+@-webkit-keyframes btn-block 
+{
+    from {display: none;}
+    to {display: block;}
+}
+@keyframes mask-layer-bg
+{
+    from {background-color: rgba(51, 51, 51, 0);}
+    to {background-color: rgba(51, 51, 51, 0.7);}
+}
+/* Firefox */
+@-moz-keyframes mask-layer-bg
+{
+    from {background-color: rgba(51, 51, 51, 0);}
+    to {background-color: rgba(51, 51, 51, 0.7);}
+}
+/* Safari and Chrome */
+@-webkit-keyframes mask-layer-bg 
+{
+    from {background-color: rgba(51, 51, 51, 0);}
+    to {background-color: rgba(51, 51, 51, 0.7);}
+}

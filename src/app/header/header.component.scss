@@ -3,19 +3,21 @@ a{
     color: #333;
 }
 header{
-    height: 75px;
+    height: 65px;
+    color: rgba(255, 255, 255, 0.9);
+    background-color: #293137;
     .header{
-        max-width: 1030px;
-        height: 100%;
-        margin:0 auto;
         #head-left{
             height: 100%;
             display: flex;
             justify-content: space-between;
             overflow: hidden;
-            .head-left-left{
+            padding: 0;
+            .head-logo{
+                width: 100%;
+                text-align: center;
                 img{
-                    height: 120%;
+                    height: 100%;
                     display: inline-flex;
                 }
                 img:first{
@@ -24,9 +26,6 @@ header{
             }
         }
         nav{
-            height: 100%;
-            color: #fff;
-            background-color: #333;
             padding: 0;
             .nav-pills{
                 max-width: 1030px;
@@ -51,12 +50,12 @@ header{
                 }
             }
             .nav-pills>li.active>a, .nav-pills>li>a:focus {
-                border-bottom: 5px solid#b81c20;
+                border-bottom: 5px solid #881e22;
                 box-sizing: border-box;
                 padding-bottom: 5px;
             }
             .nav-pills>li>a:hover{
-                border-bottom: 5px solid #881e22;
+                border-bottom: 5px solid #b81c20;
                 box-sizing: border-box;
                 padding-bottom: 5px;
             }

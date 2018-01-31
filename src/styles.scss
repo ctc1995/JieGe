@@ -4,11 +4,12 @@
     background-color: #161616;
     overflow: hidden;
     .nybanc {
-        width: 1030px;
-        height: 150px;
+        max-width: 1030px;
+        max-height: 150px;
         margin: 0px auto;
         overflow: hidden;
         img {
+            width: 100%;
             border: 0px;
             padding: 0px;
             margin: 0px;
@@ -40,5 +41,27 @@
                 padding-left: 5px;
             }
         }
+        .content-body{
+            width: 100%;
+            background-color: rgba(255, 119, 1, 0.1);
+            float: left;
+            margin: 0 1%;
+            padding: 3% 4%;
+            border-radius: 20px;
+            h3{
+                text-align: center;
+                letter-spacing: 3px;
+                margin-bottom: 20px;
+            }
+            .indent{
+                text-indent: 2.3em;
+                letter-spacing: 3px;
+            }
+        }
     }
+}
+.header, #iframeVideo, .content-box, .mask-layer{
+    max-width: 1030px;
+    height: 100%;
+    margin:0 auto;
 }

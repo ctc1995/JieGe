@@ -1,4 +1,4 @@
-<section class="bg" >
+<section class="bg">
     <p id="iframeVideo" >
         <iframe setHight
             width="100%"
@@ -17,12 +17,20 @@
         </section>
     </section>
 </section>
-<section class="">
-    <!-- <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" allowfullscreen 
-            src="http://mudu.tv/show/videolink/323957/origin">
-        </iframe>
-    </div> -->
+<section class="content-box" *ngFor="let item of contentBox">
+    <section class="content-title">
+        <p>
+            {{item.title}}
+        </p>
+    </section>
+    <section class="row content-body" >
+        <li *ngFor="let contentItem of item.content" class="col-md-3">
+            <a href="{{contentItem.video}}" target="blank">
+                <img src="{{contentItem.img}}" alt="contentItem">
+                <p>{{contentItem.str}}</p>
+            </a>
+        </li>
+    </section>
 </section>
 <!-- 53344 -->
 <!-- 96627 -->
