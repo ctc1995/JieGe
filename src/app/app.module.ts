@@ -5,10 +5,10 @@ import { HttpModule } from '@angular/http';
 import { DataModule } from './common/data.module'
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-router.module'
+import { AppRoutingModule } from './app-router.module';
 import { HeaderModule } from './header/header.module';
-import { HomeModule } from './home/home.module'
-import { FooterModule } from './footer/footer.module'
+import { HomeModule } from './home/home.module';
+import { FooterModule } from './footer/footer.module';
 
 @NgModule({
   declarations: [
