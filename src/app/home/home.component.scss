@@ -1,11 +1,10 @@
 .bg{
     // background: url("../../assets/image/tangshabu.jpg") no-repeat;
     // background-size: cover;
-    background-color: #333;
+    background-color: #3a9bb8 !important;
+    background: linear-gradient(45deg, #418FD3 30%, #32A79C 100%) !important;
     position: relative;
     #iframeVideo{
-        max-width: 1030px;
-        margin: 0 auto;
         text-align: center;
     }
     #mask-layer-box{
@@ -13,14 +12,12 @@
         top: 0;
         width: 100%;
         .mask-layer{
-            max-width: 1030px;
-            height: 100%;
-            margin: 0 auto;
             display: flex;
             justify-content: center;
             align-items: center;
+            // background-color: rgba(51, 51, 51, 0.7);
             .in-live{
-                display: none;
+                display: block;
                 font-size: 1.5rem;
             }
         }
@@ -40,37 +37,50 @@
         }
     }
 }
-@keyframes btn-block
-{
-    from {display: none;}
-    to {display: block;}
-}
-/* Firefox */
-@-moz-keyframes btn-block
-{
-    from {display: none;}
-    to {display: block;}
-}
-/* Safari and Chrome */
-@-webkit-keyframes btn-block 
-{
-    from {display: none;}
-    to {display: block;}
-}
-@keyframes mask-layer-bg
-{
-    from {background-color: rgba(51, 51, 51, 0);}
-    to {background-color: rgba(51, 51, 51, 0.7);}
-}
-/* Firefox */
-@-moz-keyframes mask-layer-bg
-{
-    from {background-color: rgba(51, 51, 51, 0);}
-    to {background-color: rgba(51, 51, 51, 0.7);}
-}
-/* Safari and Chrome */
-@-webkit-keyframes mask-layer-bg 
-{
-    from {background-color: rgba(51, 51, 51, 0);}
-    to {background-color: rgba(51, 51, 51, 0.7);}
+.content-box{
+    margin: 20px auto;
+    .content-title{
+        height: 35px;
+        line-height: 40px;
+        font-size: 1.2rem;
+        color: #b81c20;
+        border-bottom: 1px solid #bbb;
+        padding-left: 1rem;
+        margin-bottom: 10px;
+    }
+    .content-body{
+        list-style: none;
+        li{
+            position: relative;
+            a:hover{
+                img{
+                    -webkit-transform: scale(1.08);
+                    -moz-transform: scale(1.08);
+                    -o-transform: scale(1.08);
+                    transform: scale(1.08);
+                }
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                transition: transform 1.2s ease 0.1s;
+                -moz-transition: transform 1.2s ease 0.1s;
+                /* Firefox 4 */
+                -webkit-transition: transform 1.2s ease 0.1s;
+                /* Safari and Chrome */
+                -o-transition: transform 1.2s ease 0.1s;
+                /* Opera */
+            }
+            p{
+                width: 89%;
+                color: #fff;
+                text-align: center;
+                background-color: rgba(51, 51, 51, 0.5);
+                margin: 0 auto;
+                padding: 0 1rem;
+                position: absolute;
+                bottom: 0;
+            }
+        }
+    }
 }
