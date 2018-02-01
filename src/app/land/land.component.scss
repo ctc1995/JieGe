@@ -1,10 +1,8 @@
 #content-body{
-    padding: 0;
+    padding: 1% 5%;
     margin: 10px 1%;
 }
 .content-body{
-    padding: 0;
-    margin: 10px 0;
     .content-item{
         max-height: 165px;
         display: flex;
@@ -21,14 +19,15 @@
             padding-left: 10px;
             .item-title{
                 color: #444;
-                font-size: 1.1rem;
+                font-size: 1.2rem;
                 margin-bottom: 5px;
                 cursor: pointer;
             }
             .item-content{
-                font-size: 0.8rem;
+                font-size: 0.9rem;
                 letter-spacing: 0.04rem;
                 color: #777;
+                text-indent: 1.9rem;
             }
         }
     }
