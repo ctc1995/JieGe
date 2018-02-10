@@ -14,15 +14,27 @@ const routes: Routes = [
       path: 'business',
       loadChildren: './business/business.module#BusinessModule'
     },
+    {
+      path: 'live',
+      loadChildren: './live/live.module#LiveModule'
+    },
+    {
+      path: 'caiyi',
+      loadChildren: './caiyi/caiyi.module#CaiyiModule'
+    },
+    {
+      path: 'edu',
+      loadChildren: './edu/edu.module#EduModule'
+    },
     { 
       path: 'about', 
       loadChildren: './about/about.module#AboutModule'
-    },
+    }
 ];
 
 @NgModule({
     imports:[
-        RouterModule.forRoot(routes)
+        RouterModule.forRoot(routes,{useHash: true})
     ],
     exports:[
         RouterModule

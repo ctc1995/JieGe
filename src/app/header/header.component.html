@@ -9,8 +9,16 @@
         </section>
         <nav class="col-md-8">
             <ul class="nav nav-pills" role="tablist">
-                <li role="presentation" *ngFor="let item of navbar; let i =index" [ngClass]="{'active': selected == i}" (click)="checkStatus(i)">
+                <li class="nav-item" role="presentation" *ngFor="let item of navbar; let i =index" [ngClass]="{'active': selected == i}" (click)="checkStatus(i)">
                     <a>{{item}}</a>
+                    <section class="down-list" *ngIf="i==1&&selected==1">
+                        <ul [style.display]="isSpecial ? 'block' : 'none'">
+                            <li (click)="reload()">西部雏鹰公益12周年</li>
+                            <li (click)="reload()">美廷家具明星团购惠</li>
+                            <li (click)="reload()">吃货Follow Me</li>
+                            <li (click)="reload()">宝岭社区文明家庭表彰晚会</li>
+                        </ul>
+                    </section>
                 </li>
             </ul>
         </nav>

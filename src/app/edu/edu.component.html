@@ -1,0 +1,21 @@
+<div class="nybanner">
+        <div class="nybanc">
+            <img src="../../assets/image/nybanner.jpg" alt="nybanner">
+        </div>
+    </div>
+    <section class="content-box" *ngFor="let item of contentBox">
+        <section class="content-title">
+            <p>
+                {{item.title}}
+            </p>
+        </section>
+        <section class="row content-body" >
+            <li *ngFor="let contentItem of item.content" class="col-md-3">
+                <img src="{{contentItem.img}}" alt="contentItem">
+                <p>{{contentItem.str}}</p>
+                <section class="in-live">
+                    <a class="btn btn-primary" href="{{contentItem.video}}">观看直播</a> 
+                </section>
+            </li>
+        </section>
+    </section>
