@@ -8,12 +8,13 @@ import { DataService } from '../common/data-service.service'
 	styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-	contentBox:Array<object>
-	constructor(
-		private dataService : DataService
-	){
-		this.contentBox = this.dataService.contentBox
-	}
+    contentBox:Array<object>
+    constructor(
+        private dataService: DataService
+    ) {
+        this.contentBox = this.dataService.contentBox
+    }
+
 
 	ngOnInit() {
 	}

@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 
-import { LiveComponent } from './live.component'
+import { CaiyiComponent } from './caiyi.component'
 
 const routes:Routes=[
     {
         path:'',
-        component: LiveComponent
+        component: CaiyiComponent
     }
 ]
 
@@ -19,4 +19,4 @@ const routes:Routes=[
     ]
 })
 
-export class LiveRoutingModule{}
+export class CaiyiRoutingModule{}

@@ -21,7 +21,8 @@
       "styles": [
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "styles.scss",
-        "assets/font/iconfont.css"
+        "assets/font/iconfont.css",
+        "app/common/animation.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

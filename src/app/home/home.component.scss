@@ -73,7 +73,7 @@
                 position: absolute;
                 bottom: 0;
             }
-            .in-live-block{
+            .in-live{
                 display: none;
             }
         }
@@ -84,16 +84,17 @@
                 -o-transform: scale(1.08);
                 transform: scale(1.08);
             }
-            .in-live-block{
-                position: absolute;
-                top: -4%;
-                left: 2%;
+            .in-live{
                 width: 96%;
                 height: 108%;
+                background-color: rgba(0, 0, 0, 0.5);
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background-color: rgba(51, 51, 51, 0.5);
+                z-index: 9;
+                position: absolute;
+                top: -4%;
+                left: 2%;
             }
         }
     }

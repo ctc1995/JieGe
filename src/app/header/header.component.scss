@@ -34,9 +34,8 @@ header{
                 li+li{
                     margin: 0
                 }
-                li {
-                    width: 33%;
-                    // width: 19%;
+                .nav-item{
+                    width: 19%;
                     text-align: center;
                     margin-right: 1%;
                     a{
@@ -48,44 +47,29 @@ header{
                         border-radius: 0;
                         cursor: pointer;
                     }
-                    .live-list{
-                        display: none;
-                    }
-                }
-                li:nth-child(2):hover{
-                    // width: 23%;
-                    position: relative;
-                    .live-list{
-                        display: block;
+                    .down-list{
+                        background-color: rgba(0,0,0,.7);
                         position: absolute;
-                        color: #881e22;
-                        height: 50px;
                         z-index: 9;
-                        width: 125%;
                         ul{
-                            padding: 0;
                             list-style: none;
-                            background-color: rgba(68, 68, 68, 0.8);
+                            padding: 0;
+                            text-align: start;
                             li{
-                                width: 100%;
-                                border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-                                span{
-                                    color: #fff;
-                                    display: block;
-                                    padding: 8px 5px;
-                                    cursor: pointer;
-                                }
+                                padding: 5px 10px;
+                                border-bottom: 1px solid #aaa;
+                                cursor: pointer;
                             }
                         }
                     }
                 }
             }
-            .nav-pills>li.active>a, .nav-pills>li>a:focus {
+            .nav-pills>.nav-item.active>a, .nav-pills>.nav-item>a:focus {
                 border-bottom: 5px solid #881e22;
                 box-sizing: border-box;
                 padding-bottom: 5px;
             }
-            .nav-pills>li>a:hover{
+            .nav-pills>.nav-item>a:hover{
                 border-bottom: 5px solid #b81c20;
                 box-sizing: border-box;
                 padding-bottom: 5px;

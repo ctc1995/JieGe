@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 
-import { LiveComponent } from './live.component'
+import { EduComponent } from './edu.component'
 
 const routes:Routes=[
     {
         path:'',
-        component: LiveComponent
+        component: EduComponent
     }
 ]
 
@@ -19,4 +19,4 @@ const routes:Routes=[
     ]
 })
 
-export class LiveRoutingModule{}
+export class EduRoutingModule{}

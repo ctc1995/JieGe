@@ -23,6 +23,22 @@ export class HeaderComponent implements OnInit {
       "name":"live",
       "title":"企业活动直播"+ this.titleRoot
     },
+    {
+      "name":"caiyi",
+      "title":"才艺表演区"+ this.titleRoot
+    },
+    // {
+    //   "name":"business",
+    //   "title":"市场活动"+ this.titleRoot
+    // },
+    // {
+    //   "name":"land",
+    //   "title":"业务范围"+ this.titleRoot
+    // },
+    {
+      "name":"edu",
+      "title":"教育活动区"+ this.titleRoot
+    },
     // {
     //   "name":"business",
     //   "title":"市场活动"+ this.titleRoot
@@ -36,7 +52,7 @@ export class HeaderComponent implements OnInit {
       "title":"关于我们"+ this.titleRoot
     }
   ]
-  liveShow:boolean=false;
+  isSpecial:boolean=false;
   constructor(
     private titleService: Title,
     private dataService: DataService,
@@ -47,24 +63,36 @@ export class HeaderComponent implements OnInit {
   //选中导航菜单
   checkStatus(index:number){
     this.selected = index;
-    if(index==1){
-      this.liveShow = !this.liveShow;
-    }else{
-      this.router.navigate(['/'+this.navAddress[index]['name']])
-      this.titleService.setTitle(this.navAddress[index]['title']);
-      this.liveShow = false
+    this.getUrl(index);
+    console.log(index)
+    // if(index==1){
+    //   this.getItem(index)
+    // }else{
+    //   this.getUrl(index);
+    //   this.isSpecial=false;
+    // }
+  }
+  getItem(index:number=1){
+    console.log(index);
+    if(index!=1){
+      this.getUrl(index);
+    }
+    else{
+      this.isSpecial = !this.isSpecial;
     }
   }
-  goLive(index:number){
-    if(location.hash != "#/live"){
-      this.selected = index;
-      this.router.navigate(['/'+this.navAddress[index]['name']])
-      this.titleService.setTitle(this.navAddress[index]['title']);
-      this.liveShow = false;
-    }else{
-      location.reload();
-    }
+  reload(){
+    // if(location.hash!="#/live"){
+    //   this.router.navigate(['/live'])
+    // }else{
+    //   location.reload();
+    // }
   }
+  getUrl(index:number){
+    this.router.navigate(['/'+this.navAddress[index]['name']])
+    this.titleService.setTitle(this.navAddress[index]['title']);
+  }
+
   ngOnInit() {
   }
 
