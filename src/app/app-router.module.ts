@@ -4,7 +4,11 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
     { 
       path: 'index', 
-      loadChildren: './home/home.module#HomeModule'
+      loadChildren: './home/home.module#HomeModule',
+    },
+    { 
+      path: 'live', 
+      loadChildren: './live/live.module#LiveModule'
     },
     { 
       path: 'land', 
@@ -18,11 +22,12 @@ const routes: Routes = [
       path: 'about', 
       loadChildren: './about/about.module#AboutModule'
     },
+    { path: '',   redirectTo: '/index', pathMatch: 'full' }
 ];
 
 @NgModule({
     imports:[
-        RouterModule.forRoot(routes)
+        RouterModule.forRoot(routes, {useHash:true})
     ],
     exports:[
         RouterModule

@@ -1,44 +1,6 @@
-.bg{
-    // background: url("../../assets/image/tangshabu.jpg") no-repeat;
-    // background-size: cover;
-    background-color: #3a9bb8 !important;
-    background: linear-gradient(45deg, #418FD3 30%, #32A79C 100%) !important;
-    position: relative;
-    #iframeVideo{
-        text-align: center;
-    }
-    #mask-layer-box{
-        position: absolute;
-        top: 0;
-        width: 100%;
-        .mask-layer{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            // background-color: rgba(51, 51, 51, 0.7);
-            .in-live{
-                display: block;
-                font-size: 1.5rem;
-            }
-        }
-        .mask-layer:hover{
-            animation:mask-layer-bg .5s;
-            -moz-animation:mask-layer-bg .5s; /* Firefox */
-            -webkit-animation:mask-layer-bg .5s; /* Safari and Chrome */
-            -o-animation:mask-layer-bg .5s; /* Opera */
-            background-color: rgba(51, 51, 51, 0.7);
-            .in-live{
-                animation:btn-block 1s;
-                -moz-animation:btn-block 1s; /* Firefox */
-                -webkit-animation:btn-block 1s; /* Safari and Chrome */
-                -o-animation:btn-block 1s; /* Opera */
-                display: block;
-            }
-        }
-    }
-}
 .content-box{
     margin: 20px auto;
+    margin-bottom: 40px;
     .content-title{
         height: 35px;
         line-height: 40px;

@@ -11,9 +11,32 @@
             <ul class="nav nav-pills" role="tablist">
                 <li role="presentation" *ngFor="let item of navbar; let i =index" [ngClass]="{'active': selected == i}" (click)="checkStatus(i)">
                     <a>{{item}}</a>
+                    <section class="live-list" *ngIf="i==1">
+                        <ul>
+                            <li (click)="goLive(i)">
+                                <span>吃货FLLOW ME</span>
+                            </li>
+                            <li (click)="goLive(i)">
+                                <span>西部雏鹰公益12周年</span>
+                            </li>
+                            <li (click)="goLive(i)">
+                                <span>深圳市清远商会联合年会</span>
+                            </li>
+                            <li (click)="goLive(i)">
+                                <span>卓依婷美廷家具见面会</span>
+                            </li>
+                            <li (click)="goLive(i)">
+                                <span>“我是沙塘布人”表彰晚会</span>
+                            </li>
+                            <li (click)="goLive(i)">
+                                <span>宝岭社区文明家庭表彰晚会</span>
+                            </li>
+                        </ul>
+                    </section>
                 </li>
             </ul>
         </nav>
+        
     </section>
 </header>
 <!-- <carousel [interval]="myInterval" [noWrap]="noWrapSlides" [(activeSlide)]="activeSlideIndex">

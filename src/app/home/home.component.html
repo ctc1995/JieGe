@@ -25,10 +25,11 @@
     </section>
     <section class="row content-body" >
         <li *ngFor="let contentItem of item.content" class="col-md-3">
-            <a href="{{contentItem.video}}" target="blank">
-                <img src="{{contentItem.img}}" alt="contentItem">
-                <p>{{contentItem.str}}</p>
-            </a>
+            <img src="{{contentItem.img}}" alt="contentItem">
+            <p>{{contentItem.str}}</p>
+            <section class="in-live-block">
+                <a href="{{contentItem.video}}" class="btn btn-primary in-live" target="blank">观看直播</a>
+            </section>
         </li>
     </section>
 </section>
