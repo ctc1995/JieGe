@@ -37,7 +37,7 @@ export class DataService {
 	business:Array<object>=[
 		{
 			"str":"吃货Follow Me",
-			"img":this.imgRootPath+"chihuo.jpg",
+			"img":this.imgRootPath+"chihuo.png",
 			"video":"http://mudu.tv/show/videolink2/267503/origin"
 		},
 		{
@@ -96,7 +96,7 @@ export class DataService {
 		},
 		{
 			"str":"吃货Follow Me",
-			"img":this.imgRootPath+"chihuo.jpg",
+			"img":this.imgRootPath+"chihuo.png",
 			"video":"http://mudu.tv/show/videolink2/267503/origin"
 		}
 	];
