@@ -10,7 +10,7 @@ export class BusinessComponent{
     imgRootPath: string="../../assets/image/";
     content: Array<object>=[
         {
-            "title":"吃货 FLOOW ME 邻里和谐百家宴",
+            "title":"吃货 FLLOW ME 邻里和谐百家宴",
             "img":this.imgRootPath+"chihuo.png",
             "video":"http://mudu.tv/show/videolink2/299264/origin"
         },

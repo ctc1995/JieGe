@@ -34,8 +34,8 @@ header{
                 li+li{
                     margin: 0
                 }
-                li {
-                    width: 24%;
+                .nav-item{
+                    width: 19%;
                     text-align: center;
                     margin-right: 1%;
                     a{
@@ -47,14 +47,29 @@ header{
                         border-radius: 0;
                         cursor: pointer;
                     }
+                    .down-list{
+                        background-color: rgba(0,0,0,.7);
+                        position: absolute;
+                        z-index: 9;
+                        ul{
+                            list-style: none;
+                            padding: 0;
+                            text-align: start;
+                            li{
+                                padding: 5px 10px;
+                                border-bottom: 1px solid #aaa;
+                                cursor: pointer;
+                            }
+                        }
+                    }
                 }
             }
-            .nav-pills>li.active>a, .nav-pills>li>a:focus {
+            .nav-pills>.nav-item.active>a, .nav-pills>.nav-item>a:focus {
                 border-bottom: 5px solid #881e22;
                 box-sizing: border-box;
                 padding-bottom: 5px;
             }
-            .nav-pills>li>a:hover{
+            .nav-pills>.nav-item>a:hover{
                 border-bottom: 5px solid #b81c20;
                 box-sizing: border-box;
                 padding-bottom: 5px;
