@@ -9,7 +9,7 @@ import { DataService } from '../common/data-service.service'
 export class EduComponent implements OnInit {
     
 	imgRootPath:string="../../assets/image/edu/";
-	voice:Array<object>=[
+	gushi:Array<object>=[
 		{
 			"str":"单口相声",
 			"img":this.imgRootPath+"1.webp.jpg",
@@ -31,7 +31,7 @@ export class EduComponent implements OnInit {
 			"video":"#/edu"
 		}
 	];
-	duanzi:Array<object>=[
+	peiyin:Array<object>=[
 		{
 			"str":"来自动物城的声优",
 			"img":this.imgRootPath+"5.webp.jpg",
@@ -53,7 +53,7 @@ export class EduComponent implements OnInit {
 			"video":"#/edu"
 		}
 	];
-	dance:Array<object>=[
+	hunhe:Array<object>=[
 		{
 			"str":"音乐讲堂",
 			"img":this.imgRootPath+"9.webp.jpg",
@@ -77,16 +77,16 @@ export class EduComponent implements OnInit {
 	];
 	public contentBox:Array<object>=[
 		{
-			title:"公司活动直播---故事会",
-			content:this.voice
+			title:"故事会",
+			content:this.gushi
 		},
 		{
-			title:"公司活动直播---配音秀",
-			content:this.duanzi
+			title:"配音秀",
+			content:this.peiyin
 		},
 		{
-			title:"公司活动直播---混合直播",
-			content:this.dance
+			title:"混合直播",
+			content:this.hunhe
 		}
 	];
     constructor(

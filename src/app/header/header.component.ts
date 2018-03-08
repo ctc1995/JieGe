@@ -19,10 +19,10 @@ export class HeaderComponent implements OnInit {
       "name":"index",
       "title":"首页"+ this.titleRoot
     },
-    {
-      "name":"live",
-      "title":"企业活动直播"+ this.titleRoot
-    },
+    // {
+    //   "name":"live",
+    //   "title":"企业活动直播"+ this.titleRoot
+    // },
     {
       "name":"caiyi",
       "title":"才艺表演区"+ this.titleRoot

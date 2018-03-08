@@ -1,0 +1,36 @@
+<div class="nybanner">
+  <div class="nybanc">
+      <img src="../../assets/image/nybanner.jpg" alt="nybanner">
+  </div>
+</div>
+<section class="row content">
+	<section class="block-a">
+    <img class="touxiang" src="{{txImg}}" alt="3">
+    <section class="info">
+      <span>
+        {{roomName}}
+      </span>
+      <span>
+        {{level}}
+        <img src="../../assets/image/daoju/huangguan.png" alt="👑">
+      </span>
+    </section>
+    <span class="sum">观看人数：{{sum}}</span>
+  </section>
+  <section class="block-b">
+    <span></span>
+  </section>
+  <section class="block-c">
+    <ul class="c-header">
+      <li class="c-header-item" *ngFor="let item of headerItems">
+          <a href="javascript:void(0);" class="item">{{item}}</a>
+      </li>                 
+    </ul>
+    <ul class="c-body">
+      <li class="c-body-item" *ngFor="let item of daoju">
+        <img src="{{item.src}}" alt="{{item.text}}">
+        <span>{{item.text}}</span>
+      </li>
+    </ul>
+  </section>
+</section>

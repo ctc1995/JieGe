@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class DataService {
 	//导航菜单
-	public navbar:Array<any> = ['首页',/*'市场活动','业务范围',*/'活动直播','才艺表演区','教育活动区','关于我们'];
+	public navbar:Array<any> = ['首页',/*'市场活动','业务范围','活动直播',*/'才艺表演区','教育活动区','关于我们'];
 	//底部字段
 	public footerList:Array<any>=[
 		{
@@ -33,85 +33,243 @@ export class DataService {
 		}
 	]
 	
-	imgRootPath:string="../../assets/image/bus/";
+	busImgPath:string="../../assets/image/bus/";
+	caiyiImgPath:string="../../assets/image/caiyi/";
+	eduImgPath:string="../../assets/image/edu/";
 	business:Array<object>=[
 		{
 			"str":"吃货Follow Me",
-			"img":this.imgRootPath+"chihuo.png",
+			"img":this.busImgPath+"chihuo.png",
 			"video":"http://mudu.tv/show/videolink2/267503/origin"
 		},
 		{
 			"str":"深圳市清远商会联合年会",
-			"img":this.imgRootPath+"qingyuan.jpg",
+			"img":this.busImgPath+"qingyuan.jpg",
 			"video":"http://mudu.tv/show/videolink2/315200/origin"
 		},
 		{
 			"str":"卓依婷美廷家具见面会",
-			"img":this.imgRootPath+"zhuo.jpg",
+			"img":this.busImgPath+"zhuo.jpg",
 			"video":"http://mudu.tv/show/videolink2/255123/origin"
 		},
 		{
 			"str":"美廷家具明星团购惠",
-			"img":this.imgRootPath+"meiting.jpg",
+			"img":this.busImgPath+"meiting.jpg",
 			"video":"http://mudu.tv/show/videolink2/303200/origin"
 		}
 	];
 	land:Array<object>=[
 		{
 			"str":"西部雏鹰公益12周年",
-			"img":this.imgRootPath+"xibu.jpg",
+			"img":this.busImgPath+"xibu.jpg",
 			"video":"http://mudu.tv/show/videolink2/307085/origin"
 		},
 		{
 			"str":"“我是沙塘布人”系列活动表彰晚会",
-			"img":this.imgRootPath+"sha1.jpg",
+			"img":this.busImgPath+"sha1.jpg",
 			"video":"http://mudu.tv/show/videolink2/322190/origin"
 		},
 		{
 			"str":"宝岭社区文明家庭表彰晚会",
-			"img":this.imgRootPath+"baoling.jpg",
+			"img":this.busImgPath+"baoling.jpg",
 			"video":"http://mudu.tv/show/videolink2/254782/origin"
 		},
 		{
 			"str":"龙岗街道“扫黄打非”主题征文颁奖暨进校园宣传活动",
-			"img":this.imgRootPath+"dahuang.jpg",
+			"img":this.busImgPath+"dahuang.jpg",
 			"video":"http://mudu.tv/show/videolink2/298591/origin"
 		}
 	];
 	live:Array<object>=[
 		{
 			"str":"龙岗街道“扫黄打非”主题征文颁奖暨进校园宣传活动",
-			"img":this.imgRootPath+"dahuang.jpg",
+			"img":this.busImgPath+"dahuang.jpg",
 			"video":"http://mudu.tv/show/videolink2/298591/origin"
 		},
 		{
 			"str":"美廷家具明星团购惠",
-			"img":this.imgRootPath+"meiting.jpg",
+			"img":this.busImgPath+"meiting.jpg",
 			"video":"http://mudu.tv/show/videolink2/303200/origin"
 		},
 		{
 			"str":"深圳市清远商会联合年会",
-			"img":this.imgRootPath+"qingyuan.jpg",
+			"img":this.busImgPath+"qingyuan.jpg",
 			"video":"http://mudu.tv/show/videolink2/315200/origin"
 		},
 		{
 			"str":"吃货Follow Me",
-			"img":this.imgRootPath+"chihuo.png",
+			"img":this.busImgPath+"chihuo.png",
 			"video":"http://mudu.tv/show/videolink2/267503/origin"
 		}
 	];
+	voice:Array<object>=[
+		{
+			"str":"呆柒柒正在尬歌",
+			"img":this.caiyiImgPath+"1.jpg",
+			"video":"#/caiyi"
+		},
+		{
+			"str":"温柔留给意中人",
+			"img":this.caiyiImgPath+"2.jpg",
+			"video":"#/caiyi"
+		},
+		{
+			"str":"天籁剧场",
+			"img":this.caiyiImgPath+"3.jpg",
+			"video":"#/caiyi"
+		},
+		{
+			"str":"深圳好声音",
+			"img":this.caiyiImgPath+"4.jpg",
+			"video":"#/caiyi"
+		}
+	];
+	duanzi:Array<object>=[
+		{
+			"str":"美女段子手",
+			"img":this.caiyiImgPath+"5.jpg",
+			"video":"#/caiyi"
+		},
+		{
+			"str":"乡村二人转",
+			"img":this.caiyiImgPath+"6.jpg",
+			"video":"#/caiyi"
+		},
+		{
+			"str":"段王-乔菲菲",
+			"img":this.caiyiImgPath+"7.jpg",
+			"video":"#/caiyi"
+		},
+		{
+			"str":"一个很哇塞的段子手",
+			"img":this.caiyiImgPath+"8.jpg",
+			"video":"#/caiyi"
+		}
+	];
+	dance:Array<object>=[
+		{
+			"str":"奇幻舞者",
+			"img":this.caiyiImgPath+"9.jpg",
+			"video":"#/caiyi"
+		},
+		{
+			"str":"一个被唠嗑耽误的舞者",
+			"img":this.caiyiImgPath+"10.jpg",
+			"video":"#/caiyi"
+		},
+		{
+			"str":"海边神舞者",
+			"img":this.caiyiImgPath+"11.jpg",
+			"video":"#/caiyi"
+		},
+		{
+			"str":"舞王",
+			"img":this.caiyiImgPath+"12.jpg",
+			"video":"#/caiyi"
+		}
+	];
+	gushi:Array<object>=[
+		{
+			"str":"单口相声",
+			"img":this.eduImgPath+"1.webp.jpg",
+			"video":"#/edu"
+		},
+		{
+			"str":"胡建普通发故事会",
+			"img":this.eduImgPath+"2.webp.jpg",
+			"video":"#/edu"
+		},
+		{
+			"str":"猎奇世界",
+			"img":this.eduImgPath+"3.webp.jpg",
+			"video":"#/edu"
+		},
+		{
+			"str":"今夜故事堂",
+			"img":this.eduImgPath+"4.webp.jpg",
+			"video":"#/edu"
+		}
+	];
+	peiyin:Array<object>=[
+		{
+			"str":"来自动物城的声优",
+			"img":this.eduImgPath+"5.webp.jpg",
+			"video":"#/edu"
+		},
+		{
+			"str":"各种动画配音",
+			"img":this.eduImgPath+"6.webp.jpg",
+			"video":"#/edu"
+		},
+		{
+			"str":"动漫电影混编",
+			"img":this.eduImgPath+"7.webp.jpg",
+			"video":"#/edu"
+		},
+		{
+			"str":"幻神配音秀",
+			"img":this.eduImgPath+"8.webp.jpg",
+			"video":"#/edu"
+		}
+	];
+	hunhe:Array<object>=[
+		{
+			"str":"音乐讲堂",
+			"img":this.eduImgPath+"9.webp.jpg",
+			"video":"#/edu"
+		},
+		{
+			"str":"茶艺者",
+			"img":this.eduImgPath+"10.webp.jpg",
+			"video":"#/edu"
+		},
+		{
+			"str":"户外教学",
+			"img":this.eduImgPath+"11.webp.jpg",
+			"video":"#/edu"
+		},
+		{
+			"str":"女声独唱",
+			"img":this.eduImgPath+"12.webp.jpg",
+			"video":"#/edu"
+		}
+	];
 	public contentBox:Array<object>=[
+		// {
+		// 	title:"公司活动直播---才艺展示区",
+		// 	content:this.business
+		// },
+		// {
+		// 	title:"公司活动直播---教育活动区",
+		// 	content:this.land
+		// },
+		// {
+		// 	title:"公司活动直播---公益活动区",
+		// 	content:this.live
+		// }
 		{
-			title:"公司活动直播---才艺展示区",
-			content:this.business
+			title:"好声音",
+			content:this.voice
 		},
 		{
-			title:"公司活动直播---教育活动区",
-			content:this.land
+			title:"段子手",
+			content:this.duanzi
 		},
 		{
-			title:"公司活动直播---公益活动区",
-			content:this.live
+			title:"舞蹈",
+			content:this.dance
+		},
+		{
+			title:"故事会",
+			content:this.gushi
+		},
+		{
+			title:"配音秀",
+			content:this.peiyin
+		},
+		{
+			title:"混合直播",
+			content:this.hunhe
 		}
 	];
 	constructor() {

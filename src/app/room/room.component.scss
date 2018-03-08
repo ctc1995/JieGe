@@ -1,0 +1,102 @@
+.block-a, .block-b, .block-c{
+    width: 80%;
+    min-width: 600px;
+    margin: 0 auto;
+    ul{
+        list-style: none;
+        li{
+            display: inline-block;
+        }
+    }
+}
+.block-a{
+    height: 80px;
+    background-color: #ddd;
+    padding: 10px;
+    display: flex;
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    .touxiang{
+        height: 100%;
+        margin-right: 15px;
+    }
+    .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        span{
+            font-size: 18px;
+        }
+        img{
+            height: 18px;
+        }
+        span:first-child{
+            font-size: 18px;
+        }
+    }
+    .sum{
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        color: hsla(0, 0%, 20%, 0.74);;
+    }
+}
+.block-b{
+    height: 420px;
+    background-color: #333;
+    position: relative;
+    span{
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 20px;
+        width: 20px;
+        margin-left: -10px;
+        margin-top: -10px;
+        background: url("../../assets/image/daoju/playerloading_v2.gif") no-repeat 0 0;
+    }
+}
+.block-c{
+    height: 200px;
+    background-color: #666;
+    .c-header{
+        background-color: #999;
+        list-style: none;
+        padding: 0 5%;
+        margin-bottom: 0;
+        .c-header-item{
+            width: 10%;
+            display: inline-block;
+            text-align: center;
+            a{
+                text-decoration: none;
+                color: #ddd;
+            }
+        }
+        .c-header-item:first-child{
+            border-bottom: 2px solid #fff;
+            a{
+                color: #fff;
+                font-weight: 600;
+            }
+        }
+        .c-header-item:hover{
+            a{
+                color: #fff;
+            }
+        }
+    }
+    .c-body{
+        padding: 0 15px;
+        margin-top: 17px;
+        .c-body-item{
+            color: #ddd;
+            padding: 10px 20px;
+            display: inline-flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+    }
+}

@@ -23,8 +23,10 @@
     .content-left, .content-right{
         min-height: 300px;
     }
+    .content-left{
+        border-right: 1px solid #ccc;
+    }
     .content-right{
-        border-left: 1px solid #ccc;
         .content-title{
             font-family: "微软雅黑";
             font-size: 18px;

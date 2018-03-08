@@ -77,15 +77,15 @@ export class CaiyiComponent implements OnInit {
 	];
 	public contentBox:Array<object>=[
 		{
-			title:"公司活动直播---好声音",
+			title:"好声音",
 			content:this.voice
 		},
 		{
-			title:"公司活动直播---段子手",
+			title:"段子手",
 			content:this.duanzi
 		},
 		{
-			title:"公司活动直播---舞蹈",
+			title:"舞蹈",
 			content:this.dance
 		}
 	];

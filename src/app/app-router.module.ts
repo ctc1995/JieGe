@@ -34,6 +34,10 @@ const routes: Routes = [
       path: 'video',
       loadChildren: './video/video.module#VideoModule'
     },
+    {
+      path: 'room',
+      loadChildren: './room/room.module#RoomModule'
+    },
     { 
       path: 'about', 
       loadChildren: './about/about.module#AboutModule'

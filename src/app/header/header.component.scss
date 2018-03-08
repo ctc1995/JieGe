@@ -75,5 +75,13 @@ header{
                 padding-bottom: 5px;
             }
         }
+        .btn-group{
+            position: absolute;
+            right: 2%;
+            top: 12px;
+            button{
+                cursor: pointer;
+            }
+        }
     }
 }
