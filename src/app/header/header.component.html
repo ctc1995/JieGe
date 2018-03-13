@@ -22,9 +22,12 @@
                 </li>
             </ul>
         </nav>
-        <section class="btn-group">
-            <button class="btn btn-danger">登录</button>
-            <button class="btn btn-success">注册</button>
+        <section class="btn-group" *ngIf="!logStat">
+            <button class="btn btn-danger" (click)="login()">登录</button>
+            <button class="btn btn-success" (click)="logup()">注册</button>
+        </section>
+        <section class="btn-group" *ngIf="logStat">
+            <p>欢迎您,{{userName}}</p>
         </section>
     </section>
 </header>

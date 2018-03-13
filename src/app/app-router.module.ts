@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { LoginComponent } from './login/login.component'
+import { LogupComponent } from './logup/logup.component'
 
 const routes: Routes = [
     { 
@@ -37,6 +39,14 @@ const routes: Routes = [
     {
       path: 'room',
       loadChildren: './room/room.module#RoomModule'
+    },
+    { 
+      path: 'login', 
+      component: LoginComponent
+    },
+    { 
+      path: 'logup', 
+      component: LogupComponent
     },
     { 
       path: 'about', 

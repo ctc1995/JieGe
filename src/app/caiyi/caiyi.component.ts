@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Title }     from '@angular/platform-browser';
+import { Router } from '@angular/router'
 import { DataService } from '../common/data-service.service'
 
 @Component({
@@ -90,8 +92,17 @@ export class CaiyiComponent implements OnInit {
 		}
 	];
     constructor(
+        private titleService: Title,
+        private router: Router,
     ) {
     }
 
+    goRoom(imgPath, roomName){
+        sessionStorage.setItem("txImg",imgPath)
+        sessionStorage.setItem("roomName",roomName)
+        this.router.navigate(['/room'])
+        this.titleService.setTitle(roomName+"的直播间");
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+    }
     ngOnInit() { }
 }

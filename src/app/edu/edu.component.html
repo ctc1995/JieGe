@@ -14,7 +14,9 @@
                 <img src="{{contentItem.img}}" alt="contentItem">
                 <p>{{contentItem.str}}</p>
                 <section class="in-live">
-                    <a class="btn btn-primary" href="{{contentItem.video}}">直播回放</a> 
+                    <button class="btn btn-danger" (click)="goRoom(contentItem.img, contentItem.str)"><!--> href="{{contentItem.video}}" target="blank" </!-->
+                        <i class="iconfont icon-play"></i>
+                    </button> 
                 </section>
             </li>
         </section>

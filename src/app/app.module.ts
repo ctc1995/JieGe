@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-router.module';
 import { HeaderModule } from './header/header.module';
 import { HomeModule } from './home/home.module';
+import { LoginModule } from './login/login.module'
+import { LogupModule } from './logup/logup.module'
 import { FooterModule } from './footer/footer.module';
 
 @NgModule({
@@ -22,6 +24,8 @@ import { FooterModule } from './footer/footer.module';
     DataModule,
     HeaderModule,
     HomeModule,
+    LoginModule,
+    LogupModule,
     FooterModule
   ],
   providers: [

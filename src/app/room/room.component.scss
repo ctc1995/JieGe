@@ -1,4 +1,4 @@
-.block-a, .block-b, .block-c{
+.block-a, .block-b, .block-c, .block-d{
     width: 80%;
     min-width: 600px;
     margin: 0 auto;
@@ -97,6 +97,48 @@
             display: inline-flex;
             flex-direction: column;
             cursor: pointer;
+        }
+    }
+}
+.block-d{
+    height: 50px;
+    line-height: 50px;
+    background-color: #333;
+    display: flex;
+    .zan{
+        width: 50px;
+        line-height: 50px;
+        font-size: 32px;
+        text-align: center;
+        color: #ff8100;
+        border-right: 1px solid rgba(221, 221, 221, 0.4);
+        cursor: pointer;
+    }
+    .give{
+        width: 150px;
+        color: #fff;
+        font-size: 18px;
+        line-height: 50px;
+        text-align: center;
+        border-right: 1px solid rgba(221, 221, 221, 0.4);
+        cursor: pointer;
+        i{
+            color: crimson;
+            font-size: 30px;
+        }
+    }
+    .d-content{
+        padding-left: 15px;
+        button{
+            cursor: pointer;
+        }
+        .input-group{
+            width: 180px;
+            display: inline-flex;
+            margin-right: 10px;
+        }
+        .btn-info{
+            width: 80px;
         }
     }
 }

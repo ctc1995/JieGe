@@ -12,12 +12,14 @@ import { DataService } from '../common/data-service.service'
 export class HeaderComponent implements OnInit {
   selected: number = 0;
   navbar: Array<any> = [];
+  logStat = false;
+  userName=""
   //二级链接地址
   titleRoot: string ="_深圳觧歌文化传媒有限公司"
   navAddress: Array<object> = [
     {
       "name":"index",
-      "title":"首页"+ this.titleRoot
+      "title":"首页直播大厅"+ this.titleRoot
     },
     // {
     //   "name":"live",
@@ -53,12 +55,19 @@ export class HeaderComponent implements OnInit {
     }
   ]
   isSpecial:boolean=false;
+
   constructor(
     private titleService: Title,
     private dataService: DataService,
     private router: Router
   ) {
     this.navbar = dataService.navbar;
+    if(sessionStorage.getItem("logStat")=="login"){
+      this.logStat = true;
+      this.userName = sessionStorage.getItem("user")
+    }else{
+      this.logStat = false;
+    }
   }
   //选中导航菜单
   checkStatus(index:number){
@@ -92,7 +101,16 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/'+this.navAddress[index]['name']])
     this.titleService.setTitle(this.navAddress[index]['title']);
   }
-
+  login(){
+    this.router.navigate(['/login'])
+    this.titleService.setTitle("登录---觧歌传媒");
+    location.reload()
+  }
+  logup(){
+    this.router.navigate(['/logup'])
+    this.titleService.setTitle("注册---觧歌传媒");
+    location.reload()
+  }
   ngOnInit() {
   }
 

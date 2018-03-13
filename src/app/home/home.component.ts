@@ -11,10 +11,11 @@ import { DataService } from '../common/data-service.service'
 })
 export class HomeComponent implements OnInit {
     contentBox:Array<object>
+    live=false;
     constructor(
         private titleService: Title,
-        private dataService: DataService,
-        private router: Router
+        private router: Router,
+        private dataService: DataService
     ) {
         this.contentBox = this.dataService.contentBox
     }
@@ -23,6 +24,7 @@ export class HomeComponent implements OnInit {
         sessionStorage.setItem("roomName",roomName)
         this.router.navigate(['/room'])
         this.titleService.setTitle(roomName+"的直播间");
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
     }
 
 	ngOnInit() {
