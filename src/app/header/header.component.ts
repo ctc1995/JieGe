@@ -19,16 +19,12 @@ export class HeaderComponent implements OnInit {
   navAddress: Array<object> = [
     {
       "name":"index",
-      "title":"首页直播大厅"+ this.titleRoot
+      "title":"首页"+ this.titleRoot
     },
     // {
     //   "name":"live",
     //   "title":"企业活动直播"+ this.titleRoot
     // },
-    {
-      "name":"caiyi",
-      "title":"才艺表演区"+ this.titleRoot
-    },
     // {
     //   "name":"business",
     //   "title":"市场活动"+ this.titleRoot
@@ -37,18 +33,22 @@ export class HeaderComponent implements OnInit {
     //   "name":"land",
     //   "title":"业务范围"+ this.titleRoot
     // },
+    // {
+    //   "name":"edu",
+    //   "title":"教育活动区"+ this.titleRoot
+    // },
     {
-      "name":"edu",
-      "title":"教育活动区"+ this.titleRoot
+      "name":"activity",
+      "title":"活动回顾"+ this.titleRoot
     },
-    // {
-    //   "name":"business",
-    //   "title":"市场活动"+ this.titleRoot
-    // },
-    // {
-    //   "name":"land",
-    //   "title":"业务范围"+ this.titleRoot
-    // },
+    {
+      "name":"business",
+      "title":"市场活动"+ this.titleRoot
+    },
+    {
+      "name":"land",
+      "title":"业务范围"+ this.titleRoot
+    },
     {
       "name":"about",
       "title":"关于我们"+ this.titleRoot

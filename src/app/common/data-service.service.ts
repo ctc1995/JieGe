@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class DataService {
 	//导航菜单
-	public navbar:Array<any> = ['首页直播大厅',/*'市场活动','业务范围','活动直播',*/'才艺表演区','教育活动区','关于我们'];
+	public navbar:Array<any> = ['首页','活动回顾','市场活动','业务范围'/*,'活动直播','才艺表演区','教育活动区'*/,'关于我们'];
 	//底部字段
 	public footerList:Array<any>=[
 		{
@@ -235,19 +235,19 @@ export class DataService {
 		}
 	];
 	public contentBox:Array<object>=[
-		// {
-		// 	title:"公司活动直播---才艺展示区",
-		// 	content:this.business
-		// },
-		// {
-		// 	title:"公司活动直播---教育活动区",
-		// 	content:this.land
-		// },
-		// {
-		// 	title:"公司活动直播---公益活动区",
-		// 	content:this.live
-		// } 
 		{
+			title:"公司活动---才艺展示型",
+			content:this.business
+		},
+		{
+			title:"公司活动---教育活动型",
+			content:this.land
+		},
+		{
+			title:"公司活动---公益活动型",
+			content:this.live
+		} 
+		/*{
 			title:"配音秀",
 			content:this.peiyin
 		},
@@ -270,7 +270,7 @@ export class DataService {
 		{
 			title:"段子手",
 			content:this.duanzi
-		}
+		}*/
 	];
 	constructor() {
 		

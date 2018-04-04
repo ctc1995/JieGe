@@ -8,7 +8,7 @@
             </section>
         </section>
         <nav class="col-md-8">
-            <ul class="nav nav-pills" role="tablist">
+            <ul class="row nav nav-pills" role="tablist">
                 <li class="nav-item" role="presentation" *ngFor="let item of navbar; let i =index" [ngClass]="{'active': selected == i}" (click)="checkStatus(i)">
                     <a>{{item}}</a>
                     <section class="down-list" *ngIf="i==1&&selected==1">
@@ -22,13 +22,13 @@
                 </li>
             </ul>
         </nav>
-        <section class="btn-group" *ngIf="!logStat">
+        <!-- <section class="btn-group" *ngIf="!logStat">
             <button class="btn btn-danger" (click)="login()">登录</button>
             <button class="btn btn-success" (click)="logup()">注册</button>
         </section>
         <section class="btn-group" *ngIf="logStat">
             <p>欢迎您,{{userName}}</p>
-        </section>
+        </section> -->
     </section>
 </header>
 <!-- <carousel [interval]="myInterval" [noWrap]="noWrapSlides" [(activeSlide)]="activeSlideIndex">

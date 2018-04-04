@@ -9,86 +9,49 @@ import { DataService } from '../common/data-service.service'
 })
 
 export class EduComponent implements OnInit {
-    
+    fenlei:Array<string>=[
+		"IT/互联网教学","营销课程","乐器教学","语言培训"
+	]
+	paixu:Array<string>=["免费","资料","练习"]
 	imgRootPath:string="../../assets/image/edu/";
 	gushi:Array<object>=[
 		{
-			"str":"单口相声",
-			"img":this.imgRootPath+"1.webp.jpg",
+			"flag":"Python3",
+			"str":"全网最热Python3入门+进阶 更快上手实际开发",
+			"img":this.imgRootPath+"python.jpg",
+			"num":"36",
+			"price":"166.00",
 			"video":"#/edu"
 		},
 		{
-			"str":"胡建普通发故事会",
-			"img":this.imgRootPath+"2.webp.jpg",
+			"flag":"Javascript",
+			"str":"揭秘一线互联网企业 前端JavaScript高级面试",
+			"img":this.imgRootPath+"js.jpg",
+			"num":"28",
+			"price":"289.00",
 			"video":"#/edu"
 		},
 		{
-			"str":"猎奇世界",
-			"img":this.imgRootPath+"3.webp.jpg",
+			"flag":"尤克里里",
+			"str":"零基础尤克里里轻松学——基础入门教学",
+			"img":this.imgRootPath+"jita.jpg",
+			"num":"11",
+			"price":"99.00",
 			"video":"#/edu"
 		},
 		{
-			"str":"今夜故事堂",
-			"img":this.imgRootPath+"4.webp.jpg",
+			"flag":"韩语",
+			"str":"韩语入门至TOPIK初级",
+			"img":this.imgRootPath+"hanyu.png",
+			"num":"24",
+			"price":"168.00",
 			"video":"#/edu"
 		}
-	];
-	peiyin:Array<object>=[
-		{
-			"str":"来自动物城的声优",
-			"img":this.imgRootPath+"5.webp.jpg",
-			"video":"#/edu"
-		},
-		{
-			"str":"各种动画配音",
-			"img":this.imgRootPath+"6.webp.jpg",
-			"video":"#/edu"
-		},
-		{
-			"str":"动漫电影混编",
-			"img":this.imgRootPath+"7.webp.jpg",
-			"video":"#/edu"
-		},
-		{
-			"str":"幻神配音秀",
-			"img":this.imgRootPath+"8.webp.jpg",
-			"video":"#/edu"
-		}
-	];
-	hunhe:Array<object>=[
-		{
-			"str":"音乐讲堂",
-			"img":this.imgRootPath+"9.webp.jpg",
-			"video":"#/edu"
-		},
-		{
-			"str":"茶艺者",
-			"img":this.imgRootPath+"10.webp.jpg",
-			"video":"#/edu"
-		},
-		{
-			"str":"户外教学",
-			"img":this.imgRootPath+"11.webp.jpg",
-			"video":"#/edu"
-		},
-		{
-			"str":"女声独唱",
-			"img":this.imgRootPath+"12.webp.jpg",
-			"video":"#/edu"
-		}
-	];
+	]
 	public contentBox:Array<object>=[
 		{
-			title:"故事会",
+			title:"实战推荐",
 			content:this.gushi
-		},
-		{
-			title:"配音秀",
-			content:this.peiyin
-		},
-		{
-			title:"混合直播",
-			content:this.hunhe
 		}
 	];
     constructor(
@@ -104,6 +67,21 @@ export class EduComponent implements OnInit {
         this.router.navigate(['/room'])
         this.titleService.setTitle(roomName+"的直播间");
         document.body.scrollTop = document.documentElement.scrollTop = 0;
-    }
+	}
+	alert(){
+		alert('功能开发中!')
+	}
+	baoming(){
+		let user = sessionStorage.getItem("user");
+		if(user){
+			alert("当前功能处于内部开放阶段,暂不对外公测!")
+		}else{
+			let bool = confirm("请登录!")
+			if (bool) {
+				this.router.navigate(['/login'])
+				this.titleService.setTitle("登录---觧歌传媒");
+			}
+		}
+	}
     ngOnInit() { }
 }

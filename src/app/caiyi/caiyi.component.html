@@ -14,9 +14,9 @@
             <img src="{{contentItem.img}}" alt="contentItem">
             <p>{{contentItem.str}}</p>
             <section class="in-live">
-                <button class="btn btn-danger" (click)="goRoom(contentItem.img, contentItem.str)"><!--> href="{{contentItem.video}}" target="blank" </!-->
+                <a class="btn btn-danger" href="{{contentItem.video}}" target="blank" ><!--> (click)="goRoom(contentItem.img, contentItem.str)" </!-->
                     <i class="iconfont icon-play"></i>
-                </button> 
+                </a> 
             </section>
         </li>
     </section>

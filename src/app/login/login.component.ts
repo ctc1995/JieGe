@@ -41,5 +41,9 @@ export class LoginComponent implements OnInit {
       alert("请输入正确账号密码或重新注册!")
     }
   }
+  logup(){
+    this.router.navigate(['/logup'])
+    this.titleService.setTitle("注册---觧歌传媒");
+  }
 
 }

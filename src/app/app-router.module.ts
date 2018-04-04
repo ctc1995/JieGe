@@ -21,11 +21,7 @@ const routes: Routes = [
       loadChildren: './business/business.module#BusinessModule'
     },
     {
-      path: 'live',
-      loadChildren: './live/live.module#LiveModule'
-    },
-    {
-      path: 'caiyi',
+      path: 'activity',
       loadChildren: './caiyi/caiyi.module#CaiyiModule'
     },
     {

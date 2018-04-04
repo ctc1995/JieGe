@@ -1,23 +1,63 @@
 <div class="nybanner">
-        <div class="nybanc">
-            <img src="../../assets/image/nybanner.jpg" alt="nybanner">
-        </div>
+    <div class="nybanc">
+        <img src="../../assets/image/nybanner.jpg" alt="nybanner">
     </div>
-    <section class="content-box" *ngFor="let item of contentBox">
-        <section class="content-title">
-            <p>
-                {{item.title}}
-            </p>
-        </section>
-        <section class="row content-body" >
-            <li *ngFor="let contentItem of item.content" class="col-md-3">
+</div>
+<section class="fenlei">
+    <ul class="row">
+        <span class="flag">分类:</span>
+        <li class="col-md-1 active" style="margin-left: 40px;">全部</li>
+        <li class="col-md-2" *ngFor="let item of fenlei">
+            {{item}}
+        </li>
+    </ul>
+    <ul class="row">
+        <li class="col-md-1 active clean-pd">综合排序</li>
+        <li class="col-md-1 price">价格</li>
+        <li class="col-md-2 live">
+            <input type="checkbox">正在直播
+        </li>
+        <li class="col-md-1" *ngFor="let item of paixu">
+            <input type="checkbox">
+            {{item}}
+        </li>
+        <li class="qujian">
+            <input type="text" placeholder="￥">
+            -
+            <input type="text" placeholder="￥">
+            <button class="btn btn-success btn-sm" (click)="alert()">确定</button>
+        </li>
+        <li class="clean-all">
+            <span>清空条件</span>
+        </li>
+    </ul>
+</section>
+<section class="content-box" *ngFor="let item of contentBox">
+    <section class="content-title">
+        <p>
+            {{item.title}}
+        </p>
+    </section>
+    <section class="row content-body" >
+        <li *ngFor="let contentItem of item.content" class="col-md-3" (click)="baoming()">
+            <section class="image">
                 <img src="{{contentItem.img}}" alt="contentItem">
-                <p>{{contentItem.str}}</p>
+                <p class="flag">{{contentItem.flag}}</p>
                 <section class="in-live">
                     <button class="btn btn-danger" (click)="goRoom(contentItem.img, contentItem.str)"><!--> href="{{contentItem.video}}" target="blank" </!-->
                         <i class="iconfont icon-play"></i>
                     </button> 
                 </section>
-            </li>
-        </section>
+            </section>
+            <p class="title">
+                {{contentItem.str}}
+            </p>
+            <p class="info">
+                已报名人数：{{contentItem.num}}
+            </p>
+            <p class="price">
+                ￥:{{contentItem.price}}
+            </p>
+        </li>
     </section>
+</section>

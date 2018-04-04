@@ -11,7 +11,7 @@ import { DataService } from '../common/data-service.service'
 })
 export class HomeComponent implements OnInit {
     contentBox:Array<object>
-    live=false;
+    live=true;
     constructor(
         private titleService: Title,
         private router: Router,
